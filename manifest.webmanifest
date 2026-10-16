@@ -1,0 +1,16 @@
+{
+  "name": "Hà Giang 3N2Đ",
+  "short_name": "Hà Giang",
+  "description": "Lịch trình Hà Giang 06–08/11/2026 cho 4 người",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#edf1ec",
+  "theme_color": "#1e5a46",
+  "lang": "vi",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
