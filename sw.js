@@ -1,5 +1,5 @@
 // Service worker: cache toàn bộ app để chạy không mạng. Mỗi bản build có tên cache riêng -> bản cũ bị xóa khi bản mới kích hoạt.
-const CACHE = 'hg26-202610170837';
+const CACHE = 'hg26-202610210936';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', e => {
