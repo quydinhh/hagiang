@@ -1,5 +1,5 @@
 // Service worker: cache toàn bộ app để chạy không mạng. Mỗi bản build có tên cache riêng -> bản cũ bị xóa khi bản mới kích hoạt.
-const CACHE = 'hg26-202610250721';
+const CACHE = 'hg26-202610260154';
 const OCR_CACHE = 'hg26-ocr';
 const FRAMES_CACHE = 'hg26-frames-v1';
 const FRAMES = ['./khung-nhoque.jpg', './khung-cungdeo.jpg', './khung-tusan.jpg'];
@@ -16,7 +16,7 @@ self.addEventListener('fetch', e => {
   const req = e.request; if (req.method !== 'GET') return;
   const url = new URL(req.url);
   if (req.mode === 'navigate') { e.respondWith(caches.match('./index.html').then(hit => hit || fetch(req))); return; }
-  if (url.origin === location.origin && //khung-[a-z]+.jpg$/.test(url.pathname)) {
+  if (url.origin === location.origin && /\/khung-[a-z]+\.jpg$/.test(url.pathname)) {
     e.respondWith(caches.open(FRAMES_CACHE).then(async c => { const hit = await c.match(req, {ignoreSearch: true}); if (hit) return hit; const res = await fetch(req); if (res.ok) c.put(req, res.clone()); return res; }));
     return;
   }
