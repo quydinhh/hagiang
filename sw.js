@@ -1,5 +1,5 @@
 // Service worker: cache toàn bộ app để chạy không mạng. Mỗi bản build có tên cache riêng -> bản cũ bị xóa khi bản mới kích hoạt.
-const CACHE = 'hg26-202610290333';
+const CACHE = 'hg26-202610290412';
 const OCR_CACHE = 'hg26-ocr';
 const FRAMES_CACHE = 'hg26-frames-v1';
 const FRAMES = ['./khung-nhoque.jpg', './khung-cungdeo.jpg', './khung-tusan.jpg'];
